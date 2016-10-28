@@ -15,8 +15,9 @@ class MailgunMailer
     mb_obj.from(ENV['MAILGUN_ADRESS']) 
     mb_obj.add_recipient(:to, recipient)
     mb_obj.subject(subject)
-    mb_obj.body_text(text)
-    mb_obj.add_tag(campaign_id)
+    mb_obj.body_html(text)
+    mb_obj.add_campaign_id(campaign_id)
+    mb_obj.track_opens(true)
     @mg_client.send_message(ENV['MAILGUN_DOMAIN'], mb_obj)
   end
 
