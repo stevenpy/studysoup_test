@@ -18,6 +18,7 @@ class MailgunMailer
     mb_obj.body_html(text)
     mb_obj.add_campaign_id(campaign_id)
     mb_obj.track_opens(true)
+    mb_obj.track_clicks(true)
     @mg_client.send_message(ENV['MAILGUN_DOMAIN'], mb_obj)
   end
 
