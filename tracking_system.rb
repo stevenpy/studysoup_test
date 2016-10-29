@@ -24,4 +24,3 @@ get '/' do
 	@tracking_infos = TrackingInfo.all
 	erb	:index
 end
-# end

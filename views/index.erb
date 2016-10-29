@@ -12,7 +12,7 @@
 		<li>URL: <%= tracking_info.url %></li>
 		<li>IP: <%= tracking_info.ip %></li>
 		<li>Recipient: <%= tracking_info.recipient %></li>
-		<li>Timestamp: <%= tracking_info.timestamp %></li>
+		<li>Timestamp: <%= DateTime.strptime(tracking_info.timestamp, '%s').strftime('%B %d, %Y at %H:%M') %></li>
 		<li>Device-type: <%= tracking_info.devicetype %></li>
 	</ul>
 <% end %>
