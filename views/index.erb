@@ -1,1 +1,18 @@
-<h1> Here are the webhook infos </h1>
+<h1> Here are the webhook infos</h1>
+
+<% @tracking_infos.each do |tracking_info| %>
+	<h3> Sent by <%= tracking_info.domain %></h3>
+	<span><h4>Event: <%= tracking_info.event %></h4></span>
+	<ul>
+		<li>Country: <%= tracking_info.country %></li>
+		<li>Region: <%= tracking_info.region %></li>
+		<li>City: <%= tracking_info.city %></li>
+		<li>Client-name: <%= tracking_info.clientname %></li>
+		<li>Client-os: <%= tracking_info.clientos %></li>
+		<li>URL: <%= tracking_info.url %></li>
+		<li>IP: <%= tracking_info.ip %></li>
+		<li>Recipient: <%= tracking_info.recipient %></li>
+		<li>Timestamp: <%= tracking_info.timestamp %></li>
+		<li>Device-type: <%= tracking_info.devicetype %></li>
+	</ul>
+<% end %>
