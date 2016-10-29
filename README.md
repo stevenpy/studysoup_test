@@ -72,12 +72,12 @@ end
 
 ## Challenge 2
 
-##Assumptions:
+###Assumptions:
 I use Sinatra as a web-server to create a light web application in order to parse and log open and click events when an email is opened.
-Also, to have a public endpoint to put on Mailgun I use Ngrok. (Here is a download link : https://ngrok.com/)
+Also, to have a public endpoint to put on Mailgun I use Ngrok. (Here is a download link : https://ngrok.com/).
 I choose Sinatra ActiveRecord extension to deal with an SQL database using ActiveRecord ORM to save webhook informations.
 
-##Requirements:
+###Requirements:
 
 ###To set database:
 ```ruby
@@ -89,7 +89,7 @@ bundle exec rake db:migrate
 bundle exec ruby tracking_system.rb
 ```
 
-###To run Ngrok and have public endpoint(by default Sinatra uses 4567 port):
+###To run Ngrok and have public endpoint (by default Sinatra uses 4567 port):
 ```
 ./ngrok http 4567
 ```
