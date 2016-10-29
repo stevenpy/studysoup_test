@@ -71,12 +71,12 @@ end
 
 ## Challenge 2
 
-###Assumptions:
+##Assumptions:
 
 I use Sinatra as a web-server to create a light web application in order to parse and log open and click events when an email is opened.
 Also, to have a public endpoint to put on Mailgun I use Ngrok. (Here is a download link : https://ngrok.com/)
 
-Requirements:
+##Requirements:
 
 ###To set database:
 ```ruby
