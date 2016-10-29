@@ -2,7 +2,8 @@
 
 ## Challenge 1
 
-Requirements: Through my module, I choose to use environment variables
+##Assumptions: 
+Through my module, I choose to use environment variables
 to hide and secure my mailgun's credentials. We need a .env file with
 MAILGUN_SECRET, MAILGUN_DOMAIN, MAILGUN_ADRESS.
 
@@ -72,7 +73,6 @@ end
 ## Challenge 2
 
 ##Assumptions:
-
 I use Sinatra as a web-server to create a light web application in order to parse and log open and click events when an email is opened.
 Also, to have a public endpoint to put on Mailgun I use Ngrok. (Here is a download link : https://ngrok.com/)
 I choose Sinatra ActiveRecord extension to deal with an SQL database using ActiveRecord ORM to save webhook informations.
