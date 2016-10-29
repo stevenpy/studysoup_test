@@ -1,6 +1,8 @@
 # DEVELOPER CHALLENGE
 
-Through my module, I choose to use environment variables
+## Challenge 1
+
+Requirements: Through my module, I choose to use environment variables
 to hide and secure my mailgun's credentials. We need a .env file with
 MAILGUN_SECRET, MAILGUN_DOMAIN, MAILGUN_ADRESS.
 
@@ -13,7 +15,7 @@ bundle install
 
 ###To run test:
 ```ruby
-rake
+bundle exec rake
 ```
 
 This method sends an email with a subject, text,
@@ -66,3 +68,51 @@ we validate the email address format:
 def test_print_unsubscribed_members
 end
 ```
+
+## Challenge 2
+
+###Assumptions:
+
+I use Sinatra as a web-server to create a light web application in order to parse and log open and click events when an email is opened.
+Also, to have a public endpoint to put on Mailgun I use Ngrok. (Here is a download link : https://ngrok.com/)
+
+Requirements:
+
+###To set database:
+```ruby
+bundle exec rake db:migrate
+```
+
+###To run the web-server:
+```ruby
+bundle exec ruby tracking_system.rb
+```
+
+###To run Ngrok and have public endpoint(by default Sinatra uses 4567 port):
+```
+./ngrok http 4567
+```
+
+###To set webhooks:
+
+![webhook-screen](https://cloud.githubusercontent.com/assets/6988468/19832106/fc1ca816-9de8-11e6-840b-79348fff10de.png)
+
+Enjoy!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
